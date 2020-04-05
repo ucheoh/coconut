@@ -54,7 +54,7 @@ body {
 }
 
 .hero-text {
-  /* max-width: 523px; */
+  max-width: 523px;
   margin-left: 20%;
 }
 
@@ -133,7 +133,7 @@ a {
 
 /******  Screens  ******/
 
-@media (max-width: 414px) {
+@media (max-width: 450px) {
   /******  Header  ******/
   .header-main {
     grid-template-columns: 70% 1fr;
@@ -152,8 +152,9 @@ a {
 
   /******  Body  ******/
   .hero-content {
+    margin: auto;
     display: grid;
-    grid-template-columns: 80%;
+    grid-template-columns: 100%;
     grid-column-gap: 5%;
     padding: 90px 0 40px;
     /* Aligns both the content in the text and image columns to center */
@@ -161,8 +162,9 @@ a {
   }
 
   .hero-text {
-    /* max-width: 523px; */
-    margin-left: 20%;
+    max-width: 523px;
+    margin-left: 0%;
+    padding: 0 5%;
   }
 
   .hero-copy {
@@ -171,7 +173,7 @@ a {
 
   .hero-image {
     width: 85%;
-    margin-right: 20%;
+    margin: auto;
     display: block;
   }
 
