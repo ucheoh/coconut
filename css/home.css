@@ -133,7 +133,7 @@ a {
 
 /******  Screens  ******/
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   /******  Header  ******/
   .header-main {
     grid-template-columns: 70% 1fr;
