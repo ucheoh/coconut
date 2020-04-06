@@ -46,7 +46,8 @@ body {
 
 /******  Hero  ******/
 
-.hero-content {
+.hero-content,
+.services-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 5%;
@@ -55,7 +56,8 @@ body {
   align-items: center;
 }
 
-.hero-text {
+.hero-text,
+.services-text {
   /* max-width: 523px; */
   margin-left: 20%;
 }
@@ -64,7 +66,8 @@ body {
   padding-bottom: 4.2rem;
 }
 
-.hero-image {
+.hero-image,
+.services-image {
   width: 85%;
   margin-right: 20%;
   display: block;
@@ -73,6 +76,14 @@ body {
 .hero {
   max-width: 1181px;
   margin: auto;
+}
+
+.services {
+  margin: auto;
+}
+
+.hero-copy {
+  padding-bottom: 2rem;
 }
 
 /******  Challenges Section ******/
@@ -94,7 +105,8 @@ body {
   border-radius: 47px;
 }
 
-.challenges {
+.challenges,
+.services {
   background-color: #fff8f5;
 }
 
@@ -147,7 +159,7 @@ h4 {
 h5 {
   font-size: 1.8rem;
   font-weight: 500;
-  line-height: 3.9rem;
+  line-height: 4.1rem;
 }
 
 p {
@@ -161,8 +173,17 @@ small {
   font-weight: 400;
 }
 
-li {
-  font-weight: 500;
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #db3a00;
+  font-weight: bold;
+  display: inline-block;
+  width: 2.3rem;
+  margin-left: -2.3rem;
 }
 
 a {
@@ -189,6 +210,18 @@ a {
 
 .center {
   margin: auto !important;
+}
+
+.services-list {
+  /* width: 90%; */
+  margin: auto;
+  font-size: 1.8rem;
+  line-height: 4.6rem;
+  list-style-position: outside;
+}
+
+.services-group {
+  padding: 30px 20px 40px;
 }
 
 /******  Screens  ******/
@@ -224,7 +257,8 @@ a {
 
   /******  Hero  ******/
 
-  .hero-content {
+  .hero-content,
+  .services-content {
     margin: auto;
     display: grid;
     grid-template-columns: 100%;
@@ -234,7 +268,12 @@ a {
     align-items: center;
   }
 
-  .hero-text {
+  .services-content {
+    padding: 20px 0 40px;
+  }
+
+  .hero-text,
+  .services-text {
     margin-left: 0%;
     padding: 0 5%;
   }
@@ -243,19 +282,22 @@ a {
     padding-bottom: 4.2rem;
   }
 
-  .hero-image {
-    width: 65%;
+  .hero-image,
+  .services-image {
+    width: 80%;
     margin: auto;
     display: block;
     margin-top: 5rem;
   }
 
-  .hero-text {
+  .hero-text,
+  .services-text {
     width: 90%;
     margin: auto;
   }
 
-  .hero-content {
+  .hero-content,
+  .services-content {
     padding: 80px 0 80px;
   }
 
@@ -349,13 +391,21 @@ a {
   }
 
   .companies-group {
-    padding-top: -20px;
+    /* padding-top: -20px; */
   }
 
   /******  Typography  ******/
   h1 {
     font-size: 3.6rem;
     line-height: 4.7rem;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
   }
 
   /******  Buttons  ******/
@@ -378,6 +428,10 @@ a {
 
   .hero-content {
     padding: 80px 0 20px;
+  }
+
+  .services-content {
+    padding: 20px 0 40px;
   }
 
   h1 {
@@ -443,8 +497,16 @@ a {
     justify-self: center;
   }
 
-  .companies-logos {
-    margin: 40px auto 0;
+  .services-group {
+    padding: 30px 0px 40px 40px;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
   }
 }
 
@@ -456,7 +518,8 @@ a {
     padding-bottom: 2.6rem;
   }
 
-  .hero-text {
+  .hero-text,
+  .services-text {
     width: 100%;
     padding: 0;
     max-width: 600px;
@@ -478,7 +541,7 @@ a {
   }
 
   .companies-group {
-    padding-top: 4rem;
+    padding-top: 0rem;
   }
 }
 
@@ -494,7 +557,8 @@ a {
     line-height: 3.9rem;
   }
 
-  .hero-image {
+  .hero-image,
+  .services-image {
     width: 85%;
     margin: auto;
     display: block;
@@ -505,11 +569,19 @@ a {
     padding: 116px 5%;
   }
 
-  .hero-title {
+  .services-content {
+    grid-template-columns: 50% auto;
+    padding: 40px 0 40px;
+    max-width: 1043px;
+    width: 90%;
+  }
+
+  .title-left {
     text-align: left;
   }
 
-  .hero-image {
+  .hero-image,
+  .services-image {
     width: 85%;
     margin: auto;
     display: block;
@@ -537,6 +609,7 @@ a {
     font-weight: 700;
     letter-spacing: -0.5px;
     line-height: 5.9rem;
+    width: 100%;
   }
 
   .challenges-columns-3 h3 {
@@ -551,6 +624,14 @@ a {
     padding: 68px 52px;
     border-radius: 47px;
   }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -561,11 +642,12 @@ a {
     padding-bottom: 2.6rem;
   }
 
-  .hero-image {
+  .hero-image,
+  /* .services-image {
     width: 100%;
     margin: auto;
     display: block;
-  }
+  } */
 
   .challenges-columns-3 {
     display: grid;
