@@ -37,6 +37,7 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align-last: right;
+  font-size: 1.4rem;
 }
 
 body {
@@ -45,6 +46,7 @@ body {
 }
 
 /******  Hero  ******/
+
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -69,6 +71,49 @@ body {
   display: block;
 }
 
+.hero {
+  max-width: 1181px;
+  margin: auto;
+}
+
+/******  Challenges Section ******/
+
+.challenges-content {
+  max-width: 1043px;
+  margin: auto;
+}
+
+.challenges-columns-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  max-width: 1043px;
+}
+
+.challenges-box {
+  padding: 68px 35px;
+  border-radius: 47px;
+}
+
+.challenges {
+  background-color: #fff8f5;
+}
+
+.red {
+  background-color: #fff0f0;
+  color: #a10000;
+}
+
+.green {
+  background-color: #f4f4ec;
+  color: #033877;
+}
+
+.orange {
+  background-color: #fff1e9;
+  color: #993700;
+}
+
 /******  Typography  ******/
 
 h1 {
@@ -81,11 +126,16 @@ h1 {
 h2 {
   font-size: 3.2rem;
   font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 5.9rem;
+  text-align: center;
 }
 
 h3 {
-  font-size: 2.2rem;
-  font-weight: 400;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 3.4rem;
 }
 
 h4 {
@@ -95,7 +145,8 @@ h4 {
 
 h5 {
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 3.9rem;
 }
 
 p {
@@ -113,16 +164,19 @@ li {
   font-weight: 500;
 }
 
-.logo-text {
-  font-weight: 700;
-}
-
 a {
   text-decoration: none;
   color: #1c1c1c;
 }
 
+.logo-text {
+  font-weight: 700;
+  bottom: 0;
+  line-height: 1.8rem;
+}
+
 /******  Buttons  ******/
+
 .button-primary {
   color: #fff;
   background-color: #ca4f00;
@@ -132,10 +186,8 @@ a {
   font-weight: 600;
 }
 
-/******  Body  ******/
-.hero {
-  max-width: 1181px;
-  margin: auto;
+.center {
+  margin: auto !important;
 }
 
 /******  Screens  ******/
@@ -155,9 +207,14 @@ a {
   .nav-links {
     display: grid;
     grid-template-columns: 1fr;
+    padding-top: 2px;
   }
 
-  /******  Body  ******/
+  .challenges-columns-3 h3 {
+    padding-bottom: 2rem;
+  }
+
+  /******  Hero  ******/
 
   .hero-content {
     margin: auto;
@@ -198,6 +255,22 @@ a {
     text-align: center;
   }
 
+  /******  Challeges Section  ******/
+  .challenges {
+    padding: 80px 0;
+  }
+
+  .challenges-content {
+    width: 90%;
+    margin: auto;
+  }
+
+  .challenges-columns-3 {
+    margin: 70px auto;
+  }
+
+  challenges-columns-3
+
   /******  Typography  ******/
   h1 {
     font-size: 3.6rem;
@@ -222,6 +295,10 @@ a {
     display: grid;
   }
 
+  .hero-content {
+    padding: 80px 0 20px;
+  }
+
   h1 {
     font-size: 3.9rem;
     line-height: 5.4rem;
@@ -229,19 +306,23 @@ a {
     padding-bottom: 2.6rem;
   }
 
-  .hero-content {
-    padding: 80px 0 20px;
-  }
-
   .nav-links {
     grid-template-columns: auto 130px;
+  }
+
+  .challenges-columns-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 1043px;
+    margin: 70px auto;
   }
 }
 
 @media (min-width: 800px) {
   h1 {
     font-size: 3.3rem;
-    line-height: 5.8rem;
+    line-height: 5.2rem;
     font-weight: 700;
     padding-bottom: 2.6rem;
   }
@@ -249,26 +330,20 @@ a {
   .hero-text {
     width: 100%;
     padding: 0;
+    max-width: 600px;
   }
 
-  .hero-content {
-    grid-template-columns: 50% auto;
-    padding: 90px 5%;
+  .challenges-content h2 {
+    width: 90%;
   }
 
-  .hero-title {
-    text-align: left;
-  }
-
-  .hero-image {
-    width: 85%;
+  .challenges-content h2 {
+    max-width: 600px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 5.2rem;
     margin: auto;
-    display: block;
-  }
-
-  .hero-text {
-    max-width: 523px;
-    margin-left: 0%;
   }
 }
 
@@ -285,6 +360,45 @@ a {
     margin: auto;
     display: block;
   }
+
+  .hero-content {
+    grid-template-columns: 50% auto;
+    padding: 116px 5%;
+  }
+
+  .hero-title {
+    text-align: left;
+  }
+
+  .hero-image {
+    width: 85%;
+    margin: auto;
+    display: block;
+  }
+
+  .button-primary {
+    margin: 0;
+  }
+
+  .challenges {
+    padding: 116px 0;
+  }
+
+  .challenges-content h2 {
+    max-width: 694px;
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 5.9rem;
+  }
+
+  .challenges-columns-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 1043px;
+    margin: 70px auto;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -296,8 +410,15 @@ a {
   }
 
   .hero-image {
-    width: 85%;
+    width: 100%;
     margin: auto;
     display: block;
+  }
+
+  .challenges-columns-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 1043px;
   }
 }
