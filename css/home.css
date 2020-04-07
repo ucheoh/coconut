@@ -36,7 +36,8 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align-last: right;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 body {
@@ -67,7 +68,8 @@ body {
 }
 
 .hero-image,
-.services-image {
+.services-image,
+.about-image {
   width: 85%;
   margin-right: 20%;
   display: block;
@@ -106,7 +108,8 @@ body {
 }
 
 .challenges,
-.services {
+.services,
+.about {
   background-color: #fff8f5;
 }
 
@@ -182,8 +185,12 @@ ul li::before {
   color: #db3a00;
   font-weight: bold;
   display: inline-block;
-  width: 2.3rem;
+  width: 2.7rem;
   margin-left: -2.3rem;
+}
+
+nav li::before {
+  display: none;
 }
 
 a {
@@ -194,14 +201,22 @@ a {
 .logo-text {
   font-weight: 700;
   bottom: 0;
-  line-height: 1.8rem;
+  font-size: 2.4rem;
+  /* line-height: 1.8rem; */
+}
+
+.bold-copy {
+  font-weight: 700;
 }
 
 /******  Buttons  ******/
 
 .button-primary {
   color: #fff;
-  background-color: #ca4f00;
+  /* Accessible color*/
+  background-color: #993700;
+  /* Not accessible color*/
+  background-color: #f55800;
   padding: 20px 51px;
   border-radius: 30px;
   font-size: 1.8rem;
@@ -212,18 +227,86 @@ a {
   margin: auto !important;
 }
 
+/******  Services  ******/
+
 .services-list {
-  /* width: 90%; */
+  width: 90%;
   margin: auto;
   font-size: 1.8rem;
   line-height: 4.6rem;
   list-style-position: outside;
+  /* padding-left: 26px; */
 }
 
-.services-group {
-  padding: 30px 20px 40px;
+.services-links {
+  padding: 20px 20px 40px;
 }
 
+.about-copy {
+  padding: 30px 0px 47px;
+}
+
+/******  Testimonials  ******/
+.testimonials-group {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10% 20px;
+  padding: 60px 0 0;
+}
+
+.testimonials-image {
+  background-size: contain;
+  background-position: 15% 0%;
+  background-image: url(../images/quotation.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.testimonials-copy {
+  padding-top: 38px;
+}
+
+.testimonials-box {
+  display: grid;
+  grid-template-rows: auto 30px;
+  grid-gap: 20px;
+}
+
+.testimonials-name {
+  text-align: right;
+}
+
+/******  Footer  ******/
+footer {
+  background-color: #2a2c36;
+}
+
+.footer-content {
+  max-width: 1043px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+}
+
+.footer-text {
+  color: #d4d5d7;
+}
+
+.footer-text .footer-logo {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer-designer-logo {
+  width: 48px;
+  margin-left: 6px;
+}
+
+footer small {
+  vertical-align: text-top;
+}
 /******  Screens  ******/
 
 @media (min-width: 0px) {
@@ -241,7 +324,7 @@ a {
   .nav-links {
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 2px;
+    padding-top: 12px;
   }
 
   .challenges-columns-3 h3 {
@@ -258,7 +341,7 @@ a {
   /******  Hero  ******/
 
   .hero-content,
-  .services-content {
+  .about-content {
     margin: auto;
     display: grid;
     grid-template-columns: 100%;
@@ -269,7 +352,13 @@ a {
   }
 
   .services-content {
-    padding: 20px 0 40px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 5%;
+    padding: 90px 0 90px;
+    /* Aligns both the content in the text and image columns to center */
+    align-items: center;
   }
 
   .hero-text,
@@ -283,11 +372,16 @@ a {
   }
 
   .hero-image,
-  .services-image {
+  .services-image,
+  .about-image {
     width: 80%;
     margin: auto;
     display: block;
     margin-top: 5rem;
+  }
+
+  .about-image {
+    width: 70%;
   }
 
   .hero-text,
@@ -297,7 +391,7 @@ a {
   }
 
   .hero-content,
-  .services-content {
+  .about-content {
     padding: 80px 0 80px;
   }
 
@@ -307,11 +401,13 @@ a {
 
   /******  Challeges Section  ******/
   .challenges,
-  .companies {
+  .companies,
+  .testimonials {
     padding: 114px 0;
   }
 
-  .challenges-content {
+  .challenges-content,
+  .about-content {
     width: 90%;
     margin: auto;
   }
@@ -390,9 +486,9 @@ a {
     margin: 20px auto 0;
   }
 
-  .companies-group {
-    /* padding-top: -20px; */
-  }
+  /* .services-content {
+    padding: 0px auto 80px;
+  } */
 
   /******  Typography  ******/
   h1 {
@@ -413,6 +509,75 @@ a {
     display: block;
     margin: auto;
   }
+
+  /******  Testimonials  ******/
+  .testimonials-group {
+    grid-template-columns: 1fr;
+    grid-gap: 40px 90px;
+    width: 90%;
+  }
+
+  /******  Footer  ******/
+  .footer-content {
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    grid-gap: 20px;
+    padding: 40px 0;
+  }
+
+  .footer-text {
+    color: #d4d5d7;
+    margin: auto 0;
+  }
+
+  .footer-text .footer-logo {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .footer-designer-logo {
+    width: 48px;
+  }
+
+  footer small {
+    vertical-align: text-top;
+    /* max-width: 100px; */
+  }
+
+  .footer-text .last {
+    text-align: right;
+  }
+
+  .footer-text center {
+    margin: auto;
+  }
+
+  .footer-center {
+    line-height: 1.8rem;
+    margin: auto;
+  }
+
+  .footer-text-content {
+    justify-items: normal;
+    display: grid;
+    grid-template-columns: 180px auto;
+    margin: auto;
+    max-width: 250px;
+  }
+
+  .footer-text-content small {
+    line-height: 2rem;
+  }
+
+  .social {
+    color: #ffc5c1;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
 }
 
 @media (min-width: 600px) {
@@ -428,10 +593,6 @@ a {
 
   .hero-content {
     padding: 80px 0 20px;
-  }
-
-  .services-content {
-    padding: 20px 0 40px;
   }
 
   h1 {
@@ -497,9 +658,9 @@ a {
     justify-self: center;
   }
 
-  .services-group {
+  /* .services-group {
     padding: 30px 0px 40px 40px;
-  }
+  } */
 
   .desktop {
     display: block;
@@ -545,6 +706,14 @@ a {
   }
 }
 
+@media (min-width: 900px) {
+  .testimonials-group {
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: auto;
+  }
+}
+
 @media (min-width: 1000px) {
   h1 {
     font-size: 3.9rem;
@@ -558,7 +727,8 @@ a {
   }
 
   .hero-image,
-  .services-image {
+  .services-image,
+  .about-image {
     width: 85%;
     margin: auto;
     display: block;
@@ -571,17 +741,31 @@ a {
 
   .services-content {
     grid-template-columns: 50% auto;
-    padding: 40px 0 40px;
+    /* padding: 40px 0 40px; */
     max-width: 1043px;
     width: 90%;
   }
 
+  .about-content {
+    grid-template-columns: 55% auto;
+    padding: 116px 5%;
+    max-width: 1043px;
+  }
+
+  .testimonials-group {
+    max-width: 1043px;
+  }
+
+  .companies-logos {
+    padding-top: 20px;
+  }
   .title-left {
     text-align: left;
   }
 
   .hero-image,
-  .services-image {
+  .services-image,
+  .about-image {
     width: 85%;
     margin: auto;
     display: block;
@@ -632,6 +816,23 @@ a {
   .mobile {
     display: block;
   }
+
+  .footer-content {
+    max-width: 1043px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 22px 0;
+  }
+
+  .footer-text .footer-logo {
+    text-align: left;
+  }
+
+  .footer-text-content {
+    justify-items: end;
+    display: grid;
+    grid-template-columns: 80% auto;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -641,13 +842,6 @@ a {
     font-weight: 700;
     padding-bottom: 2.6rem;
   }
-
-  .hero-image,
-  /* .services-image {
-    width: 100%;
-    margin: auto;
-    display: block;
-  } */
 
   .challenges-columns-3 {
     display: grid;
