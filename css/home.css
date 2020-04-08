@@ -52,7 +52,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 5%;
-  padding: 90px 0 40px;
   /* Aligns both the content in the text and image columns to center */
   align-items: center;
 }
@@ -61,10 +60,6 @@ body {
 .services-text {
   /* max-width: 523px; */
   margin-left: 20%;
-}
-
-.hero-copy {
-  padding-bottom: 4.2rem;
 }
 
 .hero-image,
@@ -186,7 +181,7 @@ ul li::before {
   font-weight: bold;
   display: inline-block;
   width: 2.7rem;
-  margin-left: -2.3rem;
+  margin-left: -2.7rem;
 }
 
 nav li::before {
@@ -252,7 +247,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10% 20px;
-  padding: 60px 0 0;
+  padding: 40px 0 0;
 }
 
 .testimonials-image {
@@ -304,9 +299,6 @@ footer {
   margin-left: 6px;
 }
 
-footer small {
-  vertical-align: text-top;
-}
 /******  Screens  ******/
 
 @media (min-width: 0px) {
@@ -315,6 +307,10 @@ footer small {
     grid-template-columns: 70% 1fr;
     padding: 30px 0 20px 0;
     width: 90%;
+  }
+
+  .logo-text {
+    font-size: 1.8rem;
   }
 
   .about-link {
@@ -351,20 +347,17 @@ footer small {
     align-items: center;
   }
 
+  .about-content {
+    padding: 0;
+  }
+
   .services-content {
     margin: auto;
     display: grid;
     grid-template-columns: 100%;
     grid-column-gap: 5%;
-    padding: 90px 0 90px;
     /* Aligns both the content in the text and image columns to center */
     align-items: center;
-  }
-
-  .hero-text,
-  .services-text {
-    margin-left: 0%;
-    padding: 0 5%;
   }
 
   .hero-copy {
@@ -386,13 +379,12 @@ footer small {
 
   .hero-text,
   .services-text {
-    width: 90%;
+    width: 84%;
     margin: auto;
   }
 
-  .hero-content,
-  .about-content {
-    padding: 80px 0 80px;
+  .hero-content {
+    padding: 40px 0 80px;
   }
 
   .hero-title {
@@ -402,13 +394,19 @@ footer small {
   /******  Challeges Section  ******/
   .challenges,
   .companies,
-  .testimonials {
-    padding: 114px 0;
+  .testimonials,
+  .about,
+  .services {
+    padding: 90px 0;
   }
 
-  .challenges-content,
+  .challenges-content {
+    width: 84%;
+    margin: auto;
+  }
+
   .about-content {
-    width: 90%;
+    width: 84%;
     margin: auto;
   }
 
@@ -417,7 +415,7 @@ footer small {
   }
 
   h2 {
-    width: 90%;
+    width: 84%;
     max-width: 600px;
     font-size: 2.2rem;
     font-weight: 700;
@@ -486,9 +484,10 @@ footer small {
     margin: 20px auto 0;
   }
 
-  /* .services-content {
-    padding: 0px auto 80px;
-  } */
+  .services-text .title-left {
+    text-align: center;
+    width: 88%;
+  }
 
   /******  Typography  ******/
   h1 {
@@ -514,7 +513,7 @@ footer small {
   .testimonials-group {
     grid-template-columns: 1fr;
     grid-gap: 40px 90px;
-    width: 90%;
+    width: 84%;
   }
 
   /******  Footer  ******/
@@ -543,21 +542,11 @@ footer small {
     width: 48px;
   }
 
-  footer small {
-    vertical-align: text-top;
-    /* max-width: 100px; */
-  }
-
   .footer-text .last {
     text-align: right;
   }
 
   .footer-text center {
-    margin: auto;
-  }
-
-  .footer-center {
-    line-height: 1.8rem;
     margin: auto;
   }
 
@@ -570,7 +559,11 @@ footer small {
   }
 
   .footer-text-content small {
-    line-height: 2rem;
+    line-height: 2.7rem;
+  }
+
+  .footer-center {
+    line-height: 4rem;
   }
 
   .social {
@@ -592,7 +585,7 @@ footer small {
   }
 
   .hero-content {
-    padding: 80px 0 20px;
+    padding: 90px 0 90px;
   }
 
   h1 {
@@ -604,14 +597,6 @@ footer small {
 
   .nav-links {
     grid-template-columns: auto 130px;
-  }
-
-  .challenges-columns-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 25px;
-    max-width: 1043px;
-    margin: 70px auto;
   }
 
   .challenges-columns-3 h3 {
@@ -658,10 +643,6 @@ footer small {
     justify-self: center;
   }
 
-  /* .services-group {
-    padding: 30px 0px 40px 40px;
-  } */
-
   .desktop {
     display: block;
   }
@@ -669,9 +650,25 @@ footer small {
   .mobile {
     display: none;
   }
+
+  .hero-image {
+    width: 60%;
+  }
+
+  .challenges,
+  .companies,
+  .testimonials,
+  .about,
+  .services {
+    padding: 114px 0;
+  }
 }
 
 @media (min-width: 800px) {
+  .logo-text {
+    font-size: 2.4rem;
+  }
+
   h1 {
     font-size: 3.3rem;
     line-height: 5.2rem;
@@ -704,6 +701,14 @@ footer small {
   .companies-group {
     padding-top: 0rem;
   }
+
+  .challenges-columns-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    max-width: 1043px;
+    margin: 70px auto;
+  }
 }
 
 @media (min-width: 900px) {
@@ -726,14 +731,6 @@ footer small {
     line-height: 3.9rem;
   }
 
-  .hero-image,
-  .services-image,
-  .about-image {
-    width: 85%;
-    margin: auto;
-    display: block;
-  }
-
   .hero-content {
     grid-template-columns: 50% auto;
     padding: 116px 5%;
@@ -741,14 +738,13 @@ footer small {
 
   .services-content {
     grid-template-columns: 50% auto;
-    /* padding: 40px 0 40px; */
     max-width: 1043px;
     width: 90%;
   }
 
   .about-content {
     grid-template-columns: 55% auto;
-    padding: 116px 5%;
+    padding: 0;
     max-width: 1043px;
   }
 
@@ -759,7 +755,13 @@ footer small {
   .companies-logos {
     padding-top: 20px;
   }
-  .title-left {
+
+  .services-text .title-left {
+    text-align: left;
+    width: 100%;
+  }
+
+  .hero-title {
     text-align: left;
   }
 
@@ -769,6 +771,11 @@ footer small {
     width: 85%;
     margin: auto;
     display: block;
+  }
+
+  .hero-image {
+    width: 90%;
+    margin: auto 0px auto 10%;
   }
 
   .button-primary {
@@ -794,6 +801,7 @@ footer small {
     letter-spacing: -0.5px;
     line-height: 5.9rem;
     width: 100%;
+    text-align: left;
   }
 
   .challenges-columns-3 h3 {
@@ -832,6 +840,14 @@ footer small {
     justify-items: end;
     display: grid;
     grid-template-columns: 80% auto;
+  }
+
+  .footer-text-content small {
+    line-height: 2.7rem;
+  }
+
+  .footer-center {
+    line-height: 3rem;
   }
 }
 
