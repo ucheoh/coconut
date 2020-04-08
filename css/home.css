@@ -191,7 +191,7 @@ a:hover {
 }
 
 .services-links {
-  padding: 20px 20px 40px;
+  padding: 20px 20px 42px;
 }
 
 
@@ -212,7 +212,7 @@ a:hover {
 
 .challenges-box {
   padding: 68px 35px;
-  border-radius: 47px;
+  border-radius: 42px;
 }
 
 .red {
@@ -233,7 +233,7 @@ a:hover {
 
 /******  About  ******/
 .about-copy {
-  padding: 30px 0px 47px;
+  padding: 30px 0px 42px;
 }
 
 /******  Multiple Sections  ******/
@@ -324,6 +324,17 @@ footer {
 .footer-designer-logo {
   width: 48px;
   margin-left: 6px;
+}
+
+.social {
+  color: #ffc5c1;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+small a {
+  text-decoration: none;
+  color: #ffc5c1;
 }
 
 
@@ -605,12 +616,6 @@ footer {
   .footer-center {
     line-height: 4rem;
   }
-
-  .social {
-    color: #ffc5c1;
-    font-size: 1.4rem;
-    font-weight: 700;
-  }
 }
 
 
@@ -810,8 +815,8 @@ footer {
     width: 90%;
   }
   
-  .services-text .title-left {
-    text-align: left;
+  .services-text .title-left, .about .title-left {
+    text-align: left!important;
     width: 100%;
   }
 
@@ -839,6 +844,14 @@ footer {
   /******  Buttons  ******/
   .button-primary {
     margin: 0;
+  }
+
+  .button-primary {
+    margin: 0;
+  }
+
+  .challenges-content .button-primary {
+    margin: auto;
   }
 
   /******  Challenges Section  ******/
@@ -917,7 +930,6 @@ footer {
     letter-spacing: -0.5px;
     line-height: 5.9rem;
     width: 100%;
-    text-align: left;
   }
 }
 
