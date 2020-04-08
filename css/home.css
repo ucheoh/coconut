@@ -204,7 +204,7 @@ a {
   font-weight: 700;
 }
 
-/******  Buttons  ******/
+/******  Buttons & Links  ******/
 
 .button-primary {
   color: #fff;
@@ -216,6 +216,25 @@ a {
   border-radius: 30px;
   font-size: 1.8rem;
   font-weight: 600;
+  max-width: 200px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #272525;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+a:hover {
+  color: #f55800;
 }
 
 .center {
