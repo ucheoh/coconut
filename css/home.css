@@ -3,7 +3,6 @@ html {
   font-family: "Spartan";
   margin: auto;
   scroll-behavior: smooth;
-
   background-image: -webkit-gradient(
     linear,
     left bottom,
@@ -19,111 +18,10 @@ html {
   padding: 1rem;
 }
 
-/******  Header  ******/
-
-.header-main {
-  font-size: 1.6rem;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80%;
-  max-width: 1042px;
-  margin: auto;
-  padding: 50px 0 20px 0;
-}
-
-.nav-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align-last: right;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
 body {
   font-size: 1.6rem;
   background-color: #fff;
 }
-
-/******  Hero  ******/
-
-.hero-content,
-.services-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 5%;
-  /* Aligns both the content in the text and image columns to center */
-  align-items: center;
-}
-
-.hero-text,
-.services-text {
-  /* max-width: 523px; */
-  margin-left: 20%;
-}
-
-.hero-image,
-.services-image,
-.about-image {
-  width: 85%;
-  margin-right: 20%;
-  display: block;
-}
-
-.hero {
-  max-width: 1181px;
-  margin: auto;
-}
-
-.services {
-  margin: auto;
-}
-
-.hero-copy {
-  padding-bottom: 2rem;
-}
-
-/******  Challenges Section ******/
-
-.challenges-content {
-  max-width: 1043px;
-  margin: auto;
-}
-
-.challenges-columns-3 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-  max-width: 1043px;
-}
-
-.challenges-box {
-  padding: 68px 35px;
-  border-radius: 47px;
-}
-
-.challenges,
-.services,
-.about {
-  background-color: #fff8f5;
-}
-
-.red {
-  background-color: #fff0f0;
-  color: #a10000;
-}
-
-.green {
-  background-color: #f4f4ec;
-  color: #033877;
-}
-
-.orange {
-  background-color: #fff1e9;
-  color: #993700;
-}
-
-/******  Companies Section  ******/
 
 /******  Typography  ******/
 
@@ -171,6 +69,7 @@ small {
   font-weight: 400;
 }
 
+  /*** Lists ***/
 ul {
   list-style: none;
 }
@@ -188,18 +87,20 @@ nav li::before {
   display: none;
 }
 
+  /*** Links ***/
 a {
   text-decoration: none;
   color: #1c1c1c;
 }
 
+  /*** Logo ***/
 .logo-text {
   font-weight: 700;
   bottom: 0;
   font-size: 2.4rem;
-  /* line-height: 1.8rem; */
 }
 
+  /*** Bold span class ***/
 .bold-copy {
   font-weight: 700;
 }
@@ -224,11 +125,8 @@ button:hover {
   background-color: #272525;
 }
 
-textarea:focus,
-input:focus {
-  outline: 0;
-}
 
+/* Removes outline around button*/
 *:focus {
   outline: 0;
 }
@@ -237,11 +135,51 @@ a:hover {
   color: #f55800;
 }
 
+/* Aligns element to the center*/
 .center {
   margin: auto !important;
 }
 
-/******  Services  ******/
+
+/******  Header  ******/
+
+.header-main {
+  font-size: 1.6rem;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  max-width: 1042px;
+  margin: auto;
+  padding: 50px 0 20px 0;
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align-last: right;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+
+
+/******  Hero  ******/
+
+.hero {
+  max-width: 1181px;
+  margin: auto;
+}
+
+.hero-copy {
+  padding-bottom: 2rem;
+}
+
+/******  Services Section ******/
+
+.services {
+  margin: auto;
+}
 
 .services-list {
   width: 90%;
@@ -256,9 +194,79 @@ a:hover {
   padding: 20px 20px 40px;
 }
 
+
+
+/******  Challenges Section ******/
+
+.challenges-content {
+  max-width: 1043px;
+  margin: auto;
+}
+
+.challenges-columns-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  max-width: 1043px;
+}
+
+.challenges-box {
+  padding: 68px 35px;
+  border-radius: 47px;
+}
+
+.red {
+  background-color: #fff0f0;
+  color: #a10000;
+}
+
+.green {
+  background-color: #f4f4ec;
+  color: #033877;
+}
+
+.orange {
+  background-color: #fff1e9;
+  color: #993700;
+}
+
+
+/******  About  ******/
 .about-copy {
   padding: 30px 0px 47px;
 }
+
+/******  Multiple Sections  ******/
+.hero-content,
+.services-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5%;
+  /* Aligns both the content in the text and image columns to center */
+  align-items: center;
+}
+
+.hero-text,
+.services-text {
+  /* max-width: 523px; */
+  margin-left: 20%;
+}
+
+
+.hero-image,
+.services-image,
+.about-image {
+  width: 85%;
+  margin-right: 20%;
+  display: block;
+}
+
+.challenges,
+.services,
+.about {
+  background-color: #fff8f5;
+}
+
 
 /******  Testimonials  ******/
 .testimonials-group {
@@ -291,7 +299,7 @@ a:hover {
   text-align: right;
 }
 
-/******  Footer  ******/
+/******  Footer Section  ******/
 footer {
   background-color: #2a2c36;
 }
@@ -318,10 +326,17 @@ footer {
   margin-left: 6px;
 }
 
-/******  Screens  ******/
 
-@media (min-width: 0px) {
-  /******  Header  ******/
+
+
+
+
+
+
+/******  Screens - screen size (min width) impacts layout ******/
+
+@media (min-width: 0px) { /* 0px to 600px width screens */
+  /******  Header Section ******/
   .header-main {
     grid-template-columns: 70% 1fr;
     padding: 30px 0 20px 0;
@@ -331,30 +346,18 @@ footer {
   .logo-text {
     font-size: 1.8rem;
   }
-
-  .about-link {
-    display: none;
-  }
-
+  
   .nav-links {
     display: grid;
     grid-template-columns: 1fr;
     padding-top: 12px;
   }
 
-  .challenges-columns-3 h3 {
-    padding-bottom: 1.4rem;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 2.8rem;
+  .about-link {
+    display: none;
   }
 
-  .challenges-columns-3 h5 {
-    line-height: 3.3rem;
-  }
-
-  /******  Hero  ******/
-
+  /******  Hero Section  ******/
   .hero-content,
   .about-content {
     margin: auto;
@@ -364,67 +367,32 @@ footer {
     padding: 90px 0 40px;
     /* Aligns both the content in the text and image columns to center */
     align-items: center;
-  }
-
-  .about-content {
-    padding: 0;
-  }
-
-  .services-content {
-    margin: auto;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-column-gap: 5%;
-    /* Aligns both the content in the text and image columns to center */
-    align-items: center;
-  }
-
+  }  
+  
   .hero-copy {
     padding-bottom: 4.2rem;
-  }
-
-  .hero-image,
-  .services-image,
-  .about-image {
-    width: 80%;
-    margin: auto;
-    display: block;
-    margin-top: 5rem;
-  }
-
-  .about-image {
-    width: 70%;
-  }
-
-  .hero-text,
-  .services-text {
-    width: 84%;
-    margin: auto;
-  }
-
+  }  
+  
   .hero-content {
     padding: 40px 0 80px;
   }
 
   .hero-title {
     text-align: center;
-  }
+  }  
 
-  /******  Challeges Section  ******/
-  .challenges,
-  .companies,
-  .testimonials,
-  .about,
-  .services {
-    padding: 90px 0;
-  }
-
+  /******  Challenges Section  ******/
+  .challenges-columns-3 h3 {
+    padding-bottom: 1.4rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+  } 
+  .challenges-columns-3 h5 {
+    line-height: 3.3rem;
+  }  
+  
   .challenges-content {
-    width: 84%;
-    margin: auto;
-  }
-
-  .about-content {
     width: 84%;
     margin: auto;
   }
@@ -433,25 +401,7 @@ footer {
     margin: 50px auto;
   }
 
-  h2 {
-    width: 84%;
-    max-width: 600px;
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    line-height: 3.6rem;
-    margin: auto;
-  }
-
-  .companies-logos {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 1119px;
-    margin: auto;
-    grid-gap: 20px;
-    /* align-items: center; */
-  }
-
+  /******  Companies Section  ******/
   .company-1 {
     padding-top: 8px;
     width: 146.41px;
@@ -501,11 +451,67 @@ footer {
 
   .companies-logos {
     margin: 20px auto 0;
+  }  
+  
+  .companies-logos {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1119px;
+    margin: auto;
+    grid-gap: 20px;
+    /* align-items: center; */
   }
-
+  
+  /******  Services Section  ******/
+  .services-content {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 5%;
+    /* Aligns both the content in the text and image columns to center */
+    align-items: center;
+  }
+  
   .services-text .title-left {
     text-align: center;
     width: 88%;
+  } 
+
+  /******  About Section  ******/
+  .about-content {
+    padding: 0;
+  }  
+  
+  .about-image {
+    width: 70%;
+  }
+  .about-content {
+    width: 84%;
+    margin: auto;
+  }
+
+  /******  Multiple Sections  ******/
+  .hero-image,
+  .services-image,
+  .about-image {
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-top: 5rem;
+  }
+
+  .hero-text,
+  .services-text {
+    width: 84%;
+    margin: auto;
+  }
+
+  .challenges,
+  .companies,
+  .testimonials,
+  .about,
+  .services {
+    padding: 90px 0;
   }
 
   /******  Typography  ******/
@@ -514,10 +520,25 @@ footer {
     line-height: 4.7rem;
   }
 
+  h2 {
+    width: 84%;
+    max-width: 600px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 3.6rem;
+    margin: auto;
+  }
+
+  /******  Misc  ******/
+  /* There are two image files - one for mobile and one for desktop. Code below ensures the right image appears based on the screen size.  */
+
+  /* Mobile images appears on mobile screens */
   .mobile {
     display: block;
   }
-
+  
+  /* Hides mobile image on desktop */
   .desktop {
     display: none;
   }
@@ -592,36 +613,35 @@ footer {
   }
 }
 
-@media (min-width: 600px) {
+
+
+@media (min-width: 600px) { /* 600px to 800px width screens */
+  /******  Header Section  ******/
   .header-main {
     grid-template-columns: 1fr 1fr;
     padding: 30px 0 20px 0;
     width: 90%;
   }
 
-  .about-link {
-    display: grid;
-  }
-
-  .hero-content {
-    padding: 90px 0 90px;
-  }
-
-  h1 {
-    font-size: 3.9rem;
-    line-height: 5.4rem;
-    font-weight: 700;
-    padding-bottom: 2.6rem;
-  }
-
   .nav-links {
     grid-template-columns: auto 130px;
   }
+  
+  /******  Hero Section  ******/
+  .hero-content {
+    padding: 90px 0 90px;
+  }
+  
+  .hero-image {
+    width: 60%;
+  }
 
+  /******  Challenges Section  ******/
   .challenges-columns-3 h3 {
     padding-bottom: 2rem;
   }
 
+  
   .companies-logos {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
@@ -660,8 +680,14 @@ footer {
     width: 134px;
     /* height: 67px; */
     justify-self: center;
+  }  
+  
+  /******  About Section  ******/
+  .about-link {
+    display: grid;
   }
 
+  /******  Misc Section  ******/
   .desktop {
     display: block;
   }
@@ -670,10 +696,7 @@ footer {
     display: none;
   }
 
-  .hero-image {
-    width: 60%;
-  }
-
+  /******  Multiple Section  ******/
   .challenges,
   .companies,
   .testimonials,
@@ -681,13 +704,51 @@ footer {
   .services {
     padding: 114px 0;
   }
+
+  /******  Typography  ******/
+  h1 {
+    font-size: 3.9rem;
+    line-height: 5.4rem;
+    font-weight: 700;
+    padding-bottom: 2.6rem;
+  }
 }
 
 @media (min-width: 800px) {
+
+  /******  Header Section  ******/
   .logo-text {
     font-size: 2.4rem;
   }
 
+  .companies-logos {
+    grid-template-columns: repeat(3, 1fr);
+    /* align-items: center; */
+  }
+
+  /******  Challenges Section  ******/
+  .challenges-columns-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    max-width: 1043px;
+    margin: 70px auto;
+  }
+
+  /******  Companies Section  ******/
+   .companies-group {
+    padding-top: 0rem;
+  }
+
+  /******  Multiple Sections  ******/
+  .hero-text,
+  .services-text {
+    width: 100%;
+    padding: 0;
+    max-width: 600px;
+  }  
+  
+  /******  Typography  ******/
   h1 {
     font-size: 3.3rem;
     line-height: 5.2rem;
@@ -695,12 +756,6 @@ footer {
     padding-bottom: 2.6rem;
   }
 
-  .hero-text,
-  .services-text {
-    width: 100%;
-    padding: 0;
-    max-width: 600px;
-  }
 
   h2 {
     width: 90%;
@@ -710,23 +765,6 @@ footer {
     letter-spacing: -0.5px;
     line-height: 5.2rem;
     margin: auto;
-  }
-
-  .companies-logos {
-    grid-template-columns: repeat(3, 1fr);
-    /* align-items: center; */
-  }
-
-  .companies-group {
-    padding-top: 0rem;
-  }
-
-  .challenges-columns-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 25px;
-    max-width: 1043px;
-    margin: 70px auto;
   }
 }
 
@@ -739,51 +777,57 @@ footer {
 }
 
 @media (min-width: 1000px) {
-  h1 {
-    font-size: 3.9rem;
-    line-height: 5.8rem;
-    font-weight: 700;
-    padding-bottom: 2.6rem;
-  }
-
-  .challenges-columns-3 h5 {
-    line-height: 3.9rem;
-  }
-
+  
+  /******  Hero Section  ******/
   .hero-content {
     grid-template-columns: 50% auto;
     padding: 116px 5%;
   }
+  
+  .hero-title {
+    text-align: left;
+  }
 
+  .hero-image {
+    width: 90%;
+    margin: auto 0px auto 10%;
+  }
+  
+  /******  Challenges Section  ******/
+  .challenges-columns-3 h5 {
+    line-height: 3.9rem;
+  }
+  
+  /******  Companies Section  ******/
+  .companies-logos {
+    padding-top: 20px;
+  }
+
+  /******  Services Section  ******/
   .services-content {
     grid-template-columns: 50% auto;
     max-width: 1043px;
     width: 90%;
   }
+  
+  .services-text .title-left {
+    text-align: left;
+    width: 100%;
+  }
 
+  /******  About Section  ******/
   .about-content {
     grid-template-columns: 55% auto;
     padding: 0;
     max-width: 1043px;
   }
 
+  /******  Testimonials Section  ******/
   .testimonials-group {
     max-width: 1043px;
   }
 
-  .companies-logos {
-    padding-top: 20px;
-  }
-
-  .services-text .title-left {
-    text-align: left;
-    width: 100%;
-  }
-
-  .hero-title {
-    text-align: left;
-  }
-
+  /******  Multiple Sections  ******/
   .hero-image,
   .services-image,
   .about-image {
@@ -792,15 +836,12 @@ footer {
     display: block;
   }
 
-  .hero-image {
-    width: 90%;
-    margin: auto 0px auto 10%;
-  }
-
+  /******  Buttons  ******/
   .button-primary {
     margin: 0;
   }
 
+  /******  Challenges Section  ******/
   .challenges {
     padding: 116px 0;
   }
@@ -811,16 +852,6 @@ footer {
     grid-gap: 20px;
     max-width: 1043px;
     margin: 70px auto;
-  }
-
-  h2 {
-    max-width: 694px;
-    font-size: 3.2rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    line-height: 5.9rem;
-    width: 100%;
-    text-align: left;
   }
 
   .challenges-columns-3 h3 {
@@ -836,6 +867,7 @@ footer {
     border-radius: 47px;
   }
 
+  /******  Misc Section  ******/
   .desktop {
     display: none;
   }
@@ -844,6 +876,7 @@ footer {
     display: block;
   }
 
+  /******  Footer Section  ******/
   .footer-content {
     max-width: 1043px;
     display: grid;
@@ -868,16 +901,37 @@ footer {
   .footer-center {
     line-height: 3rem;
   }
-}
 
-@media (min-width: 1200px) {
+  /******  Typography  ******/
   h1 {
-    font-size: 4.4rem;
-    line-height: 7.1rem;
+    font-size: 3.9rem;
+    line-height: 5.8rem;
     font-weight: 700;
     padding-bottom: 2.6rem;
   }
+  
+  h2 {
+    max-width: 694px;
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 5.9rem;
+    width: 100%;
+    text-align: left;
+  }
+}
 
+@media (min-width: 1200px) {
+  /******  Companies Section  ******/
+  .companies-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1119px;
+    margin: auto;
+    /* align-items: center; */
+  }   
+  
+  /******  Challenges Section  ******/
   .challenges-columns-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -885,11 +939,11 @@ footer {
     max-width: 1043px;
   }
 
-  .companies-logos {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    max-width: 1119px;
-    margin: auto;
-    /* align-items: center; */
+  /******  Typography  ******/
+  h1 {
+    font-size: 4.4rem;
+    line-height: 7.1rem;
+    font-weight: 700;
+    padding-bottom: 2.6rem;
   }
 }
