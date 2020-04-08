@@ -459,10 +459,6 @@ small a {
   .company-2 {
     padding: 0 0 14px;
   }
-
-  .companies-logos {
-    margin: 20px auto 0;
-  }  
   
   .companies-logos {
     display: grid;
@@ -470,6 +466,7 @@ small a {
     max-width: 1119px;
     margin: auto;
     grid-gap: 20px;
+    padding-top: 20px;
     /* align-items: center; */
   }
   
